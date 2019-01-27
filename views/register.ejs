@@ -1,0 +1,35 @@
+<div class="card-body shadow-sm mt-5 p-0">
+    <h2 class="bg-light p-2 text-info">Register</h2>
+    <% include ./partials/messages %>
+    <form action="/users/register" method="POST" class="d-flex flex-column p-3">
+        <input 
+            type="text" 
+            class="form-control my-3" 
+            placeholder="User Name" 
+            name="name"
+            value="<%= typeof name != 'undefined' ? name: '' %>"
+        >
+        <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Email" 
+            name="email"
+            value="<%= typeof email != 'undefined' ? email: '' %>"
+        >
+        <input 
+            type="text" 
+            class="form-control my-3" 
+            placeholder="Password" 
+            name="password"
+            value="<%= typeof password != 'undefined' ? password: '' %>"
+        >
+        <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Confirm Password" 
+            name="confirmation"
+            value="<%= typeof confirmation != 'undefined' ? confirmation: '' %>"
+        >
+        <button class="btn btn-block btn-info my-3" type="submit">Register</button>
+    </form>
+</div>

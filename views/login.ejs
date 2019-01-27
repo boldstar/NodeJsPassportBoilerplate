@@ -1,0 +1,9 @@
+<div class="card-body shadow-sm mt-5 p-0">
+    <h2 class="bg-light p-2 text-info">Login</h2>
+    <% include ./partials/messages %>
+    <form action="/users/login" method="POST" class="d-flex flex-column p-3">
+        <input type="text" class="form-control my-3" placeholder="User Name" name="email">
+        <input type="text" class="form-control" placeholder="Password" name="password">
+        <button class="btn btn-block btn-info my-3" type="submit">Login</button>
+    </form>
+</div>
